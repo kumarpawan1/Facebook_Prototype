@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Group</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <h1>Groups</h1>
+  
+  
+  <div>
+  <% for(var i in data) 
+	            {                     
+            %>        
+           		    <p><strong>Group Name: </strong>
+            		<a class="test" id='<%= data[i].GroupName %>' href="" ><%=data[i].GroupName%></a>
+           <% 
+	            }  
+	       %>
+
+
+  
+ <br><form method="post" action="/creategroup" >
+<input type="text" name ="groupname" hint="Enter Group Name">
+<input type="submit" name="submit" value ="CreateGroup">
+</form><br><br><br>
+  <br><form method="post" action="/deletegroup" >
+<input type="text" name ="groupname" hint="Enter Group Name">
+<input type="submit" name="submit" value ="DeletingGroup">
+</form><br><br><br>
+
+</div>
+
+
+<script>
+	var x = document.getElementsByClassName("test");
+	for(i=0;i<x.length;i++){
+		var xx = x[i].innerHTML;
+		var yy = '/groupname/'+xx.replace(' ', '-');
+		x[i].href= yy;
+	}
+</script>
+  <form method="post" action='/Homelogin'>
+    <input type="submit" value="Home">
+    </form>
+    <form method="post" action='/logout'>
+    <input type="submit" value="Logout">
+    </form>
+  
+    
+  </body>
+</html>

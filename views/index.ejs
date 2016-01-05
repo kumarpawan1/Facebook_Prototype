@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<meta charset="UTF-8">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+</head>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+
+<div class="container" align="right">
+<h1> Login </h1>
+
+
+<form method="post" action="/login" name="fb" novalidate >
+ EmailId <input type="varchar" name="id1" ng-model="id1" required><br>
+<span style="color:red" ng-show="fb.id1.$dirty && fb.id1.$invalid">
+<span ng-show="fb.id1.$error.required"> Can not be blank </span>
+</span><br>
+Password <input type="varchar" name="id2" ng-model="id2" required><br>
+<br><span style="color:red" ng-show="fb.id2.$dirty && fb.id2.$invalid">
+<span ng-show="fb.id2.$error.required"> Can not be blank </span>
+</span>
+<input type="submit" value="LOGIN" name="login" ng-disabled="fb.id1.$pristine || fb.id1.$dirty && fb.id1.$invalid ||  fb.id2.$pristine || fb.id2.$dirty && fb.id2.$invalid " >
+</div>
+
+</form>
+
+<br><br><br>
+<div class="container" align="right">
+<h1> SIGNUP </h1>
+<form method="post" action="/signup" name="fb1" novalidate>
+
+First Name <input type="text" name="fname" ng-model="fname" required><br>
+<span style="color:red" ng-show="fb1.fname.$dirty && fb1.fname.$invalid">
+<span ng-show="fb1.fname.$error.required"> Can not be blank </span>
+</span><br>
+
+<br>Last Name<input type="text" name="lname" ng-model="lname" required><br>
+<span style="color:red" ng-show="fb1.lname.$dirty && fb1.lname.$invalid">
+<span ng-show="fb1.lname.$error.required"> Can not be blank </span>
+</span><br>
+
+<br>Email <input type="varchar" name="Email" ng-model="Email" required><br>
+<span style="color:red" ng-show="fb1.Email.$dirty && fb1.Email.$invalid">
+<span ng-show="fb1.Email.$error.required"> Can not be blank </span>
+</span><br>
+<br>New Password<input type="varchar" name="passwd" ng-model="passwd" required><br>
+<span style="color:red" ng-show="fb1.passwd.$dirty && fb1.passwd.$invalid">
+<span ng-show="fb1.passwd.$error.required"> Can not be blank </span>
+</span><br>
+<br>Date of birth<input type="date" name="dob" ng-model="dob" required><br>
+<span style="color:red" ng-show="fb1.dob.$dirty && fb1.dob.$invalid">
+<span ng-show="fb1.dob.$error.required"> Can not be blank </span>
+</span><br>
+<br>select your sex <input type="radio" name="sex" value="male">Male<br>
+<input type="radio" name="sex" value="female">Female<br>
+
+
+
+
+<br><input type="submit" name="signup" value="SIGNUP" ng-disabled="fb1.fname.$pristine || fb1.fname.$dirty && fb1.fname.$invalid ||  fb1.lname.$pristine || fb1.lname.$dirty && fb1.lname.$invalid ||   fb1.Email.$pristine || fb1.Email.$dirty && fb1.Email.$invalid|| fb1.passwd.$pristine || fb1.passwd.$dirty && fb1.passwd.$invalid||fb1.dob.$pristine || fb1.dob.$dirty && fb1.dob.$invalid" >
+</div>
+
+</form>
+
+
+</html>

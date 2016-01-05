@@ -1,0 +1,33 @@
+
+<html>
+  <head>
+    <title>About</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <div>
+  <% for(var i in data)
+  {
+  %>
+  <p><strong>EmailId:</strong><%= data[i].EmailId %></p>
+  <p><strong>music:</strong><%= data[i].music %></p>
+  <p><strong>shows:</strong><%= data[i].shows %></p>
+  <p><strong>sports:</strong><%= data[i].sports %></p>
+ 
+  
+  <br>
+  <%
+  }
+  %>
+  </div>
+  <form method="post" action='/Homelogin'>
+    <input type="submit" value="Home">
+    </form>
+  <form method="post" action='/logout'>
+    <input type="submit" value="Logout">
+    </form>
+  
+  
+    
+  </body>
+</html>

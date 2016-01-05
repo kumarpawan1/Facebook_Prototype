@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Group Members</title>
+
+  </head>
+
+  <body>
+
+
+
+<br><h1 align="center">Groups</h1><br><br>
+  <p><strong>Group Members: </strong>
+  <div>
+	       <% for(var i in data) 
+	            {                     
+            %>        
+
+					
+				           		    
+           		    
+           		    
+           		    <br><%= data[i].MemberName %><br>
+           		    
+           		    
+            		
+           	       
+           <% 
+	            }  
+	       %>
+
+
+
+
+	
+
+
+  <br><form method="get" action="/groups/add" >
+<input type="text" name ="groupmember" hint="Group Member Email">
+<input type="submit" name="submit" value ="Adding member">
+</form>
+
+<br><form method="get" action="/groups/delete" >
+<input type="text" name ="groupmember" hint="Group Member Email">
+<input type="submit" name="submit" value ="Deleting Member">
+</form>
+</div>
+
+<form method="post" action='/Homelogin'>
+    <input type="submit" value="Home">
+    </form>
+    <form method="post" action='/logout'>
+    <input type="submit" value="Logout">
+    </form>
+	
+
+
+
+  
+  </body>
+</html>

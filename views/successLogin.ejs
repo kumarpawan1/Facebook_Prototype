@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Successful Login</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  
+    <h1>Welcome to Facebook</h1>
+    <body>
+   
+    
+    <form method="post" action='/about'>
+    <input type="submit" value="About">
+    </form>
+ <form method="post" action='/interest'>
+    <input type="submit" value="Interest">
+    </form>
+ 
+ 
+<br><form method="get" action="/AddFriend" >
+<input type="text" name="ffriend">
+<input type="submit" value="AddFriend">
+</form><br><br><br>
+<br><form method="get" action="/AcceptFriend" >
+<input type="submit" value="AcceptFriend">
+</form><br><br><br>
+</div>
+  
+  <br><h1 align="center">Groups</h1><br><br>
+  
+  <div>
+	       <% for(var i in data) 
+	            {                     
+            %>        
+           		   
+            		<a class="test" id='<%= data[i].group_name %>' href="" ><%=data[i].group_name%></a>
+           <% 
+	            }  
+	       %>
+  
+  <form method="get" action='/showgroup'>
+  <input type="submit" value="Group">
+    </form>
+    
+    <form method="post" action='/logout'>
+    <input type="submit" value="Logout">
+    </form>
+    
+  
+</body>
+   
+    
+  
+  
+  
+  
+
+    
+ 
+</html>

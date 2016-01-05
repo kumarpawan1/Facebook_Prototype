@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>About</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <div>
+  <% for(var i in data)
+  {
+  %>
+  <p><strong>EmailId:</strong><%= data[i].EmailId %></p>
+  <p><strong>Work:</strong><%= data[i].Work %></p>
+  <p><strong>Education:</strong><%= data[i].Education %></p>
+  <p><strong>Contacts: </strong>%= data[i].Contacts %></p>
+  <p><strong>LifeEvents:</strong><%= data[i].LifeEvents %></p>
+  <br>
+  <%
+  }
+  %>
+  </div>
+  
+    
+  </body>
+</html>
